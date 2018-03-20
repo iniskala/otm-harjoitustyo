@@ -1,0 +1,132 @@
+commit 9caddc7283ca00a05631c9314bb02a3fb12be809
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:15:49 2018 +0200
+
+    asdasd
+
+ tiedostoja/file22.bat | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit cfdfd906bdfbc7005845622f36cbb7ed565123df
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:15:28 2018 +0200
+
+    asdadasdasd
+
+ tiedostoja/file.bat | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 59268c8e9814f7c5540e667bbf80a927d7a6561d
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:14:21 2018 +0200
+
+    juttuja v200
+
+ tiedostoja/file.bat  | 1 +
+ tiedostoja/file2.bat | 0
+ 2 files changed, 1 insertion(+)
+
+commit e84e7442e6c7aa4c587bb1882988e36c28fb7422
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:11:22 2018 +0200
+
+    viruksia
+
+ tiedostoja/file.bat  | 0
+ tiedostoja/file2.bat | 0
+ tiedostoja/file3.bat | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 261fa9413df6a7769b0cae003814f62ea5e1b7cd
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:06:58 2018 +0200
+
+    lisää juttuja
+
+ eka.txt    | Bin 0 -> 3916 bytes
+ kolmas.txt |   2 +-
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+
+commit fc2084c1e3bb8c53893dae95a98c7d013234f0aa
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:01:35 2018 +0200
+
+    asd
+
+ tiedosto.txt | Bin 3908 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f845462aec07c7a0add67bc0c8c281629b44740
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 20:00:31 2018 +0200
+
+    voi voi
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 36772174f4184d44347b26eb6a08fc1b7773cf2a
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:56:55 2018 +0200
+
+    paljon muutoksia
+
+ tiedosto.txt | Bin 4045 -> 3908 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 334f1b96b79dfe7381ffce80e5a90fd9679822ed
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:55:48 2018 +0200
+
+    asdasdadsasdadadasddas
+
+ tiedosto.txt | Bin 10 -> 4045 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bed0541f5a39f5029f943f46a2bf3d338f12544b
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:46:26 2018 +0200
+
+    pollero
+
+ stuff/lollero.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f3f29231b4ea29ecb93a7589f781afbd22f5a7a0
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:45:34 2018 +0200
+
+    lisää muutoksia
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 6ff2564ee9f71e3e73d390ee13e326ca7c2379fa
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:44:26 2018 +0200
+
+    lisää
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7a39a62497d74c8a89b127d9f7f53b3b3c92c0d0
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:42:27 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit dc5f2359dbb7355ab132d2a074a2ea10ad1bf4b9
+Author: iniskala <iiro.niskala@helsinki.fi>
+Date:   Tue Mar 20 19:39:23 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
