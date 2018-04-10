@@ -54,6 +54,15 @@ public class ui extends Application{
         lopeta.setOnMouseClicked((event) -> {
             System.exit(0);
         });
+        
+        edelliset.setOnMouseClicked((event) ->{
+            
+        });
+        
+        tallenna.setOnMouseClicked((event) ->{
+            
+        });
+        
         Scene nakyma1 = new Scene(alkuruutu);
         
         ikkuna1.setScene(nakyma1);
