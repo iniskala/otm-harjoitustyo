@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
@@ -26,10 +27,11 @@ public class ui extends Application{
         BorderPane alkuruutu = new BorderPane();
         Label nimi = new Label("Sitsiplassaaja");
         nimi.setFont(Font.font("Verdana", FontPosture.ITALIC,20));
-        Button lopeta = new Button("Lopeta");
+        
         HBox tiedot = new HBox();
         tiedot.setPadding(new Insets(20,20,20,20));
         tiedot.setSpacing(10);
+        VBox nappulat = new VBox();
         
         TextField nimet = new TextField();
         TextField avec = new TextField();
@@ -38,10 +40,15 @@ public class ui extends Application{
         Label avect = new Label("Avec (etunimi sukunimi):");
         Label pst = new Label ("Pöytäseuratoive (etunimi sukunimi):");
         
+        Button edelliset = new Button ("Edelliset plassit");
+        Button tallenna = new Button ("Tallenna");
+        Button lopeta = new Button("Lopeta");
+        
         tiedot.getChildren().addAll(nimett, nimet, avect, avec, pst, poytaseuratoive);
+        nappulat.getChildren().addAll(tallenna, edelliset, lopeta);
         
         alkuruutu.setTop(nimi);
-        alkuruutu.setBottom(lopeta);
+        alkuruutu.setBottom(nappulat);
         alkuruutu.setCenter(tiedot);
         
         lopeta.setOnMouseClicked((event) -> {
