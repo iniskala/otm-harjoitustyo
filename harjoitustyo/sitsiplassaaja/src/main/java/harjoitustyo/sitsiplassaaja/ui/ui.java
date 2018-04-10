@@ -40,12 +40,12 @@ public class ui extends Application{
         Label avect = new Label("Avec (etunimi sukunimi):");
         Label pst = new Label ("Pöytäseuratoive (etunimi sukunimi):");
         
-        Button edelliset = new Button ("Edelliset plassit");
+        Button generoi = new Button ("Generoi plassi");
         Button tallenna = new Button ("Tallenna");
         Button lopeta = new Button("Lopeta");
         
         tiedot.getChildren().addAll(nimett, nimet, avect, avec, pst, poytaseuratoive);
-        nappulat.getChildren().addAll(tallenna, edelliset, lopeta);
+        nappulat.getChildren().addAll(tallenna, generoi, lopeta);
         
         alkuruutu.setTop(nimi);
         alkuruutu.setBottom(nappulat);
@@ -55,7 +55,7 @@ public class ui extends Application{
             System.exit(0);
         });
         
-        edelliset.setOnMouseClicked((event) ->{
+        generoi.setOnMouseClicked((event) ->{
             
         });
         
