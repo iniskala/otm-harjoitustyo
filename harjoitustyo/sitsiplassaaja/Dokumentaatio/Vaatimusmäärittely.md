@@ -16,7 +16,7 @@ Perusversion tarjoama toiminnallisuus
 -Käyttäjä voi lisätä henkilöitä tietokantaan.
 -Käyttäjä voi generoida sitseille istumajärjestyksen.
 -Istumajärjestys ottaa huomioon toiveet.
--Käyttäjä voi tutkia vanhoja plassauksia.
+
 
 
 Jatkokehitysideoita
@@ -27,3 +27,4 @@ Jatkokehitysideoita
 -Plassissa lukee allergiat keittiön helpotukseksi
 -Plassissa voi määritellä pöytien määrän ja koon
 -Plassissa voi olla useampi pöytärivi
+-Käyttäjä voi tutkia vanhoja plassauksia.
