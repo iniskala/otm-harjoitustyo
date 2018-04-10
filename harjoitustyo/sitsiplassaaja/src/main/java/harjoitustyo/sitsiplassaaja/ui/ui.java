@@ -5,10 +5,14 @@
  */
 package harjoitustyo.sitsiplassaaja.ui;
 
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.application.Application;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
@@ -22,8 +26,27 @@ public class ui extends Application{
         BorderPane alkuruutu = new BorderPane();
         Label nimi = new Label("Sitsiplassaaja");
         nimi.setFont(Font.font("Verdana", FontPosture.ITALIC,20));
-        alkuruutu.setTop(nimi);
+        Button lopeta = new Button("Lopeta");
+        HBox tiedot = new HBox();
+        tiedot.setPadding(new Insets(20,20,20,20));
+        tiedot.setSpacing(10);
         
+        TextField nimet = new TextField();
+        TextField avec = new TextField();
+        TextField poytaseuratoive = new TextField();
+        Label nimett = new Label("Nimi (etunimi sukunimi):");
+        Label avect = new Label("Avec (etunimi sukunimi):");
+        Label pst = new Label ("Pöytäseuratoive (etunimi sukunimi):");
+        
+        tiedot.getChildren().addAll(nimett, nimet, avect, avec, pst, poytaseuratoive);
+        
+        alkuruutu.setTop(nimi);
+        alkuruutu.setBottom(lopeta);
+        alkuruutu.setCenter(tiedot);
+        
+        lopeta.setOnMouseClicked((event) -> {
+            System.exit(0);
+        });
         Scene nakyma1 = new Scene(alkuruutu);
         
         ikkuna1.setScene(nakyma1);
