@@ -59,9 +59,10 @@ public class ui extends Application{
             
         });
         
-        tallenna.setOnMouseClicked((event) ->{
-            
+        tallenna.setOnMouseClicked((event) ->{                                    
+           
         });
+        
         Scene nakyma1 = new Scene(alkuruutu);
         
         ikkuna1.setScene(nakyma1);

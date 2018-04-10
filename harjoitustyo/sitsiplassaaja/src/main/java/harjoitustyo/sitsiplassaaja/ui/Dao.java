@@ -5,10 +5,16 @@
  */
 package harjoitustyo.sitsiplassaaja.ui;
 
+import java.sql.SQLException;
+import java.util.List;
+
 /**
  *
  * @author nendeo
  */
-interface Dao<T0, T1> {
-    
+interface Dao<T, K> {
+    T findOne(K key) throws SQLException;
+    List<T> findAll() throws SQLException;
+    T saveOrUpdate(T object) throws SQLException;
+    void delete(K key) throws SQLException;
 }
