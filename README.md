@@ -4,3 +4,6 @@
 
 muutoksia!
 Let's make some trouble!
+
+
+[Vaatimusmäärittely.md]( https://github.com/iniskala/otm-harjoitustyo/harjoitustyo/sitsiplassaaja/Dokumentaatio/Vaatimusmäärittely.md )
