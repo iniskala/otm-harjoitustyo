@@ -17,7 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
-
+import java.sql.*;
 /**
  *
  * @author Iiro
@@ -62,7 +62,6 @@ public class ui extends Application{
         tallenna.setOnMouseClicked((event) ->{
             
         });
-        
         Scene nakyma1 = new Scene(alkuruutu);
         
         ikkuna1.setScene(nakyma1);

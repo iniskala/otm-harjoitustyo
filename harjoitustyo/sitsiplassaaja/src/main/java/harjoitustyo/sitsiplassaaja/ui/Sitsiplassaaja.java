@@ -18,9 +18,11 @@ public class Sitsiplassaaja extends ui{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
         launch(ui.class);
     }
-
+    
     
     
 }
