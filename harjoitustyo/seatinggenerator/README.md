@@ -6,7 +6,7 @@ ottaa huomioon sitsaajan tiedot.
 
 Dokumentaatio
 
-[Vaatimusmäärittely](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/sitsiplassaaja/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
+[Vaatimusmäärittely](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
 
-[Työaikakirjanpito](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/sitsiplassaaja/Dokumentaatio/tuntikirjanpito.md)
+[Työaikakirjanpito](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/tuntikirjanpito.md)
 
