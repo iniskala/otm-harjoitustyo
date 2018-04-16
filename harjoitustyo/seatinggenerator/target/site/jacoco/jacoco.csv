@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+sitsiplassaaja,seatinggenerator.ui,Ui,230,0,6,0,47,0,8,0,5,0
+sitsiplassaaja,start,Main,8,0,0,0,3,0,2,0,2,0
+sitsiplassaaja,seatinggenerator.database,ParticipantDao,171,0,4,0,47,0,7,0,5,0
+sitsiplassaaja,seatinggenerator.database,Database,10,0,0,0,4,0,2,0,2,0
+sitsiplassaaja,seatinggenerator.database,Participant,52,0,0,0,22,0,10,0,10,0
