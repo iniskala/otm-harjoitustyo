@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package harjoitustyo.sitsiplassaaja.ui;
+package start;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import java.sql.*;
+import seatinggenerator.ui.Ui;
 /**
  *
  * @author Iiro
  */
-public class Sitsiplassaaja extends ui {
+public class Main extends Ui {
 
     /**
      * @param args the command line arguments
@@ -21,7 +22,7 @@ public class Sitsiplassaaja extends ui {
                        
         
         
-        launch(ui.class);
+        launch(Ui.class);
     }
     
     

@@ -3,24 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package harjoitustyo.sitsiplassaaja.ui;
+package seatinggenerator.database;
 
 /**
  *
  * @author nendeo
  */
-public class Sitsaaja {
+public class Participant {
     private Integer id;
     private String nimi;
     private String avec;
     private String toive;
     
-    public Sitsaaja(String nimi, String avec, String toive) {
+    public Participant(String nimi, String avec, String toive) {
         this.nimi = nimi;
         this.avec = avec;
         this.toive = toive;
     }
-    public Sitsaaja(Integer id, String nimi, String avec, String toive) {
+    public Participant(Integer id, String nimi, String avec, String toive) {
         this.nimi = nimi;
         this.avec = avec;
         this.toive = toive;

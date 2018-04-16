@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package harjoitustyo.sitsiplassaaja.ui;
+package seatinggenerator.database;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -13,15 +13,15 @@ import java.util.ArrayList;
  *
  * @author nendeo
  */
-public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
+public class ParticipantDao implements Dao<Participant, Integer> {
     private Database database;
     
-    public SitsaajaDao(Database database) {
+    public ParticipantDao(Database database) {
         this.database = database;
     }
     
     @Override
-    public Sitsaaja findOne(Integer key) throws SQLException {
+    public Participant findOne(Integer key) throws SQLException {
         Connection conn = database.getConnection();
         PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Sitsit WHERE id = ?");
         stmt.setInt(1, key);
@@ -32,7 +32,7 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
             return null;
         }
 
-        Sitsaaja s = new Sitsaaja(rs.getInt("id"), rs.getString("nimi"),
+        Participant s = new Participant(rs.getInt("id"), rs.getString("nimi"),
             rs.getString("avec"), rs.getString("toive"));
   
         stmt.close();
@@ -44,8 +44,8 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
     }
 
     @Override
-    public List<Sitsaaja> findAll() throws SQLException {
-        List<Sitsaaja> sitsaaja = new ArrayList<>();
+    public List<Participant> findAll() throws SQLException {
+        List<Participant> sitsaaja = new ArrayList<>();
         Connection conn = database.getConnection();
         PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Sitsit");
 
@@ -56,7 +56,7 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
             String nimi = rs.getString("nimi");
             String avec = rs.getString("avec");
             String toive = rs.getString("toive");
-            sitsaaja.add(new Sitsaaja(id, nimi, avec, toive));
+            sitsaaja.add(new Participant(id, nimi, avec, toive));
                 
 
             rs.close();
@@ -68,7 +68,7 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
     }
 
     @Override
-    public Sitsaaja saveOrUpdate(Sitsaaja sitsaaja) throws SQLException {
+    public Participant saveOrUpdate(Participant sitsaaja) throws SQLException {
         Connection conn = database.getConnection();
 
         PreparedStatement stmt = conn.prepareStatement("INSERT INTO Sitsit (nimi, avec, toive) VALUES (?,?,?)");
