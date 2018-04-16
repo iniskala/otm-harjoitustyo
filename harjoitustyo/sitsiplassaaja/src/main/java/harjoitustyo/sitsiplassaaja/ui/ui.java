@@ -18,12 +18,19 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Iiro
  */
 public class ui extends Application{
-    public void start(Stage ikkuna1){
+    public void start(Stage ikkuna1)throws Exception{
+        
+        Database database = new Database("jdbc:sqlite:sitsit.db");       
+        SitsaajaDao sitsaajadao = new SitsaajaDao(database);
+        Sitsaaja uusi = new Sitsaaja("nimi","avec","pst");
+        
         BorderPane alkuruutu = new BorderPane();
         Label nimi = new Label("Sitsiplassaaja");
         nimi.setFont(Font.font("Verdana", FontPosture.ITALIC,20));
@@ -60,7 +67,23 @@ public class ui extends Application{
         });
         
         tallenna.setOnMouseClicked((event) ->{                                    
-           
+           if(nimett.getText().isEmpty()){
+              
+           } else if(avect.getText().isEmpty()){
+               
+           } else if(pst.getText().isEmpty()){
+               
+           } else {
+               uusi.setNimi(nimet.getText());
+               uusi.setAvec(avect.getText());
+               uusi.setToive(pst.getText());
+               try {
+                   sitsaajadao.saveOrUpdate(uusi);
+               } catch (SQLException ex) {
+                   Logger.getLogger(ui.class.getName()).log(Level.SEVERE, null, ex);
+               }
+               
+           }
         });
         
         Scene nakyma1 = new Scene(alkuruutu);
