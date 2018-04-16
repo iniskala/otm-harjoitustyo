@@ -75,8 +75,8 @@ public class ui extends Application{
                
            } else {
                uusi.setNimi(nimet.getText());
-               uusi.setAvec(avect.getText());
-               uusi.setToive(pst.getText());
+               uusi.setAvec(avec.getText());
+               uusi.setToive(poytaseuratoive.getText());
                try {
                    sitsaajadao.saveOrUpdate(uusi);
                } catch (SQLException ex) {

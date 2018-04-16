@@ -15,39 +15,39 @@ public class Sitsaaja {
     private String avec;
     private String toive;
     
-    public Sitsaaja(String nimi,String avec, String toive){
-        this.nimi=nimi;
-        this.avec=avec;
-        this.toive=toive;
+    public Sitsaaja(String nimi, String avec, String toive) {
+        this.nimi = nimi;
+        this.avec = avec;
+        this.toive = toive;
     }
-    public Sitsaaja(Integer id, String nimi,String avec, String toive){
-        this.nimi=nimi;
-        this.avec=avec;
-        this.toive=toive;
+    public Sitsaaja(Integer id, String nimi, String avec, String toive) {
+        this.nimi = nimi;
+        this.avec = avec;
+        this.toive = toive;
     }
     
-    public String getNimi(){
+    public String getNimi() {
         return this.nimi;
     }
     
-    public String getAvec(){
+    public String getAvec() {
         return this.avec;
     }
     
-    public String getToive(){
+    public String getToive() {
         return this.toive;
     }
-    public void setNimi(String uusi){
-        this.nimi= uusi;
+    public void setNimi(String uusi) {
+        this.nimi = uusi;
     }
-    public void setAvec(String uusi){
-        this.avec=uusi;
+    public void setAvec(String uusi) {
+        this.avec = uusi;
     }
-    public void setToive(String uusi){
-        this.toive=uusi;
+    public void setToive(String uusi) {
+        this.toive = uusi;
     }
     public void setId(Integer id) {
-        this.id=id;
+        this.id = id;
     }
     
     public Integer getId() {

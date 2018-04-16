@@ -12,7 +12,7 @@ import java.sql.*;
  *
  * @author Iiro
  */
-public class Sitsiplassaaja extends ui{
+public class Sitsiplassaaja extends ui {
 
     /**
      * @param args the command line arguments

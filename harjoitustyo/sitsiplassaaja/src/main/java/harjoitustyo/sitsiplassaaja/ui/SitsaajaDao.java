@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author nendeo
  */
-public class SitsaajaDao implements Dao<Sitsaaja, Integer>{
+public class SitsaajaDao implements Dao<Sitsaaja, Integer> {
     private Database database;
     
     public SitsaajaDao(Database database) {
@@ -33,7 +33,7 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer>{
         }
 
         Sitsaaja s = new Sitsaaja(rs.getInt("id"), rs.getString("nimi"),
-            rs.getString("avec"), rs.getString("pöytäseuratoive"));
+            rs.getString("avec"), rs.getString("toive"));
   
         stmt.close();
         rs.close();
@@ -71,16 +71,18 @@ public class SitsaajaDao implements Dao<Sitsaaja, Integer>{
     public Sitsaaja saveOrUpdate(Sitsaaja sitsaaja) throws SQLException {
         Connection conn = database.getConnection();
 
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Sitsit (nimi) VALUES (?)");
+        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Sitsit (nimi, avec, toive) VALUES (?,?,?)");
 
-                stmt.setString(1, sitsaaja.getNimi());
-                stmt.executeUpdate();
-
-                PreparedStatement stmt_2 = conn.prepareStatement("SELECT * FROM Sitsit WHERE nimi = ?");
-                stmt_2.setString(1, sitsaaja.getNimi());
-
-                ResultSet rs = stmt_2.executeQuery();
-                sitsaaja.setId(rs.getInt("id"));
+        stmt.setString(1, sitsaaja.getNimi());
+        stmt.setString(2, sitsaaja.getAvec());
+        stmt.setString(3, sitsaaja.getToive());
+        stmt.executeUpdate();
+                
+        PreparedStatement stmt2 = conn.prepareStatement("SELECT * FROM Sitsit WHERE nimi = ?");
+        stmt2.setString(1, sitsaaja.getNimi());
+                
+        ResultSet rs = stmt2.executeQuery();
+        sitsaaja.setId(rs.getInt("id"));
                 
                 
             
