@@ -21,6 +21,7 @@ public class Participant {
         this.toive = toive;
     }
     public Participant(Integer id, String nimi, String avec, String toive) {
+        this.id = id;
         this.nimi = nimi;
         this.avec = avec;
         this.toive = toive;
@@ -54,5 +55,7 @@ public class Participant {
         return id;
     }
     
-    
+    public String toString(){
+        return "Participant: " + this.nimi + ", avec: " + this.avec + ", wish: " + this.toive;
+    }
 }
