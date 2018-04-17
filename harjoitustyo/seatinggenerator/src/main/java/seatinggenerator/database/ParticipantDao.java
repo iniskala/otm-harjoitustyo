@@ -45,7 +45,7 @@ public class ParticipantDao implements Dao<Participant, Integer> {
 
     @Override
     public List<Participant> findAll() throws SQLException {
-        List<Participant> sitsaaja = new ArrayList<>();
+        List<Participant> participant = new ArrayList<>();
         Connection conn = database.getConnection();
         PreparedStatement stmt = conn.prepareStatement("SELECT * FROM Sitsit");
 
@@ -53,18 +53,18 @@ public class ParticipantDao implements Dao<Participant, Integer> {
         
         while (rs.next()) {
             Integer id = rs.getInt("id");
-            String nimi = rs.getString("nimi");
+            String name = rs.getString("nimi");
             String avec = rs.getString("avec");
-            String toive = rs.getString("toive");
-            sitsaaja.add(new Participant(id, nimi, avec, toive));
+            String wish = rs.getString("toive");
+            participant.add(new Participant(id, name, avec, wish));
                 
 
-            rs.close();
+
                 
         }
-        
+        rs.close();
 
-        return sitsaaja;
+        return participant;
     }
 
     @Override
@@ -73,19 +73,19 @@ public class ParticipantDao implements Dao<Participant, Integer> {
 
         PreparedStatement stmt = conn.prepareStatement("INSERT INTO Sitsit (nimi, avec, toive) VALUES (?,?,?)");
 
-        stmt.setString(1, sitsaaja.getNimi());
+        stmt.setString(1, sitsaaja.getName());
         stmt.setString(2, sitsaaja.getAvec());
-        stmt.setString(3, sitsaaja.getToive());
+        stmt.setString(3, sitsaaja.getWish());
         stmt.executeUpdate();
                 
         PreparedStatement stmt2 = conn.prepareStatement("SELECT * FROM Sitsit WHERE nimi = ?");
-        stmt2.setString(1, sitsaaja.getNimi());
+        stmt2.setString(1, sitsaaja.getName());
                 
         ResultSet rs = stmt2.executeQuery();
         sitsaaja.setId(rs.getInt("id"));
                 
                 
-            
+        conn.close();    
         
 
         return sitsaaja;

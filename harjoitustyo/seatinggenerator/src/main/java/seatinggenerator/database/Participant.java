@@ -11,41 +11,41 @@ package seatinggenerator.database;
  */
 public class Participant {
     private Integer id;
-    private String nimi;
+    private String name;
     private String avec;
-    private String toive;
+    private String wish;
     
     public Participant(String nimi, String avec, String toive) {
-        this.nimi = nimi;
+        this.name = nimi;
         this.avec = avec;
-        this.toive = toive;
+        this.wish = toive;
     }
     public Participant(Integer id, String nimi, String avec, String toive) {
         this.id = id;
-        this.nimi = nimi;
+        this.name = nimi;
         this.avec = avec;
-        this.toive = toive;
+        this.wish = toive;
     }
     
-    public String getNimi() {
-        return this.nimi;
+    public String getName() {
+        return this.name;
     }
     
     public String getAvec() {
         return this.avec;
     }
     
-    public String getToive() {
-        return this.toive;
+    public String getWish() {
+        return this.wish;
     }
-    public void setNimi(String uusi) {
-        this.nimi = uusi;
+    public void setName(String newone) {
+        this.name = newone;
     }
-    public void setAvec(String uusi) {
-        this.avec = uusi;
+    public void setAvec(String newone) {
+        this.avec = newone;
     }
-    public void setToive(String uusi) {
-        this.toive = uusi;
+    public void setWish(String newone) {
+        this.wish = newone;
     }
     public void setId(Integer id) {
         this.id = id;
@@ -55,7 +55,8 @@ public class Participant {
         return id;
     }
     
-    public String toString(){
-        return "Participant: " + this.nimi + ", avec: " + this.avec + ", wish: " + this.toive;
+    @Override
+    public String toString() {
+        return "Participant: " + this.name + ", avec: " + this.avec + ", wish: " + this.wish;
     }
 }

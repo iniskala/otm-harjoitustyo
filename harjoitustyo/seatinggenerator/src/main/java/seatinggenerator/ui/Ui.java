@@ -21,6 +21,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.stage.Stage;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -28,6 +30,28 @@ import java.util.logging.Logger;
  * @author Iiro
  */
 public class Ui extends Application {
+    
+    private Scene allParticipants() throws Exception{
+        Database database = new Database("jdbc:sqlite:sitsit.db");       
+        ParticipantDao participantdao = new ParticipantDao(database);
+        BorderPane listwindow = new BorderPane();
+        Label list2 = new Label("");
+        List list1 = new ArrayList<Participant>(participantdao.findAll());
+        StringBuilder builder = new StringBuilder();
+        
+        for (int i = 0; i < list1.size(); i++){
+            System.out.println(i);
+            builder.append(list1.get(i).toString() +"\n");
+            System.out.println(i);
+        }
+        
+        list2.setText(builder.toString());
+        listwindow.setCenter(list2);
+        Scene scene2 =new Scene(listwindow);
+        
+        return scene2;
+    }
+    
     public void start(Stage window1)throws Exception{
         
         Database database = new Database("jdbc:sqlite:sitsit.db");       
@@ -53,9 +77,10 @@ public class Ui extends Application {
         Button generoi = new Button ("Generate");
         Button save = new Button ("Save");
         Button exit = new Button("Exit");
+        Button list = new Button("Participants");
         
         info.getChildren().addAll(name, names, avectxt, avec, wishtxt, wish);
-        buttons.getChildren().addAll(save, generoi, exit);
+        buttons.getChildren().addAll(save, generoi, list, exit);
         
         startwindow.setTop(name);
         startwindow.setBottom(buttons);
@@ -69,6 +94,13 @@ public class Ui extends Application {
             
         });
         
+        list.setOnMouseClicked((event) ->{
+            try {
+                window1.setScene(allParticipants());
+            } catch (Exception ex) {
+            }
+        });
+        
         save.setOnMouseClicked((event) ->{                                    
            if(names.getText().isEmpty()){
               
@@ -77,9 +109,9 @@ public class Ui extends Application {
            } else if(wishtxt.getText().isEmpty()){
                
            } else {
-               newp.setNimi(name.getText());
+               newp.setName(names.getText());
                newp.setAvec(avec.getText());
-               newp.setToive(wish.getText());
+               newp.setWish(wish.getText());
                try {
                    participantdao.saveOrUpdate(newp);
                } catch (SQLException ex) {
@@ -94,4 +126,6 @@ public class Ui extends Application {
         window1.setScene(scene1);
         window1.show();
     }
+    
+    
 }

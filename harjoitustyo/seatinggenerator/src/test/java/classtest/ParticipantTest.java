@@ -39,9 +39,9 @@ public class ParticipantTest {
     @Test
     public void changesWork() {
         Participant test = new Participant("Jack Bauer", "Lillith Smith", "Jack Ryan");
-        test.setNimi("Nope");
+        test.setName("Nope");
         test.setAvec("Empty");
-        test.setToive("Not");
+        test.setWish("Not");
         String answer = test.toString();
         
         assertEquals("Participant: Nope, avec: Empty, wish: Not", answer);
@@ -52,7 +52,7 @@ public class ParticipantTest {
         Participant test = new Participant(1, "Jack Bauer", "Lillith Smith", "Jack Ryan");
         String answer = test.toString();
         
-        assertEquals("Participant: " + test.getNimi() + ", avec: " + test.getAvec() + ", wish: " + test.getToive(), answer);
+        assertEquals("Participant: " + test.getName() + ", avec: " + test.getAvec() + ", wish: " + test.getWish(), answer);
     }
     @Test
     public void constructor2Works() {
