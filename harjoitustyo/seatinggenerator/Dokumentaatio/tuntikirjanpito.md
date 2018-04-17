@@ -8,4 +8,6 @@ Päivä|----|Aika(h)|-----|Mitä
 
 16.4.|----|1|---------|Projektin siistiminen ja checkstyle
 
+17.4.|----|3|---------|Ominaisuuksien lisäys ja testien teko
 
+Yhteensä: 16,5 h
