@@ -1,1 +1,1 @@
-[Pakkuskaavio](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Otm.png)
+[Pakkauskaavio](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Otm.png)
