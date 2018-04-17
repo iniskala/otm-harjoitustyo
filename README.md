@@ -1,9 +1,12 @@
-[komentorivi.txt](https://github.com/iniskala/otm-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+Sitsiplassaaja
 
-[gitlog.txt](https://github.com/iniskala/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+Sovelluksen avulla voidaan generoida istumajärjestys sitseille. Ohjelmaan syötetään sitsaajan tiedot
+ja ne tallentaan tietokantaan. Tietokannasta voidaan generoida sattumanvarainen istumajärjestys, joka
+ottaa huomioon sitsaajan tiedot.
 
-muutoksia!
-Let's make some trouble!
+Dokumentaatio
 
+[Vaatimusmäärittely](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
 
-[Vaatimusmäärittely.md](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/sitsiplassaaja/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
+[Työaikakirjanpito](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/tuntikirjanpito.md)
+
