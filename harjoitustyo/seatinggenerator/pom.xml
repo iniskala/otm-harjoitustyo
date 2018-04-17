@@ -40,7 +40,7 @@
             <version>0.8.0</version>
             <configuration>
                 <excludes>
-                    <exclude>/seattinggenerator/ui*</exclude>
+                    <exclude>/seatinggenerator/ui/*</exclude>
                 </excludes>
             </configuration> 
             <executions>
