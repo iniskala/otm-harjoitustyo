@@ -40,7 +40,7 @@
             <version>0.8.0</version>
             <configuration>
                 <excludes>
-                    <exclude>**/seattinggenerator/ui/Ui.java</exclude>
+                    <exclude>/seattinggenerator/ui*</exclude>
                 </excludes>
             </configuration> 
             <executions>
