@@ -10,4 +10,6 @@ Päivä|----|Aika(h)|-----|Mitä
 
 17.4.|----|3|---------|Ominaisuuksien lisäys ja testien teko
 
-Yhteensä: 16,5 h
+24.4.|----|4|---------| Generoimisen lisäys ja tekstien lisäys
+
+Yhteensä: 20,5 h
