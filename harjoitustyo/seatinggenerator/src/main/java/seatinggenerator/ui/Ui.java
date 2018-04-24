@@ -5,6 +5,7 @@
  */
 package seatinggenerator.ui;
 
+import java.io.IOException;
 import seatinggenerator.database.Participant;
 import seatinggenerator.database.ParticipantDao;
 import seatinggenerator.database.Database;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import seatinggenerator.generatoretc.Generator;
 /**
  *
  * @author Iiro
@@ -33,7 +35,7 @@ public class Ui extends Application {
     
     private Scene allParticipants() throws Exception{
         Database database = new Database("jdbc:sqlite:sitsit.db");
-        database.init();
+        
         
         ParticipantDao participantdao = new ParticipantDao(database);
         BorderPane listwindow = new BorderPane();
@@ -42,9 +44,9 @@ public class Ui extends Application {
         StringBuilder builder = new StringBuilder();
         
         for (int i = 0; i < list1.size(); i++){
-            System.out.println(i);
-            builder.append(list1.get(i).toString() +"\n");
-            System.out.println(i);
+            
+            builder.append(list1.get(i).toString() + "\n");
+            
         }
         
         list2.setText(builder.toString());
@@ -92,8 +94,18 @@ public class Ui extends Application {
             System.exit(0);
         });
         
+        
+        Generator generator = new Generator();
         generoi.setOnMouseClicked((event) ->{
-            
+            try {
+                generator.seatingSave(participantdao);
+            } catch (IOException ex) {
+                Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+            }
         });
         
         list.setOnMouseClicked((event) ->{
