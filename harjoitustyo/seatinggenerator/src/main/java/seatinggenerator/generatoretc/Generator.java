@@ -38,7 +38,7 @@ public class Generator {
         writer.close();
         
     }
-    public Integer numberOfParticipants() throws SQLException, ClassNotFoundException{
+    public Integer numberOfParticipants() throws SQLException, ClassNotFoundException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.help = new ParticipantDao(database);
         List<Participant> list1 = help.findAll();
