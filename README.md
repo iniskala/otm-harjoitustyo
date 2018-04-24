@@ -12,4 +12,4 @@ Dokumentaatio
 
 [Arkkitehtuuri](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Arkkitehtuuri.md)
 
-[Julkaisu] (https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
+[Julkaisu](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
