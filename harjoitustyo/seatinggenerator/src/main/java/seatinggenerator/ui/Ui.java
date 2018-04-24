@@ -32,7 +32,9 @@ import java.util.logging.Logger;
 public class Ui extends Application {
     
     private Scene allParticipants() throws Exception{
-        Database database = new Database("jdbc:sqlite:sitsit.db");       
+        Database database = new Database("jdbc:sqlite:sitsit.db");
+        database.init();
+        
         ParticipantDao participantdao = new ParticipantDao(database);
         BorderPane listwindow = new BorderPane();
         Label list2 = new Label("");

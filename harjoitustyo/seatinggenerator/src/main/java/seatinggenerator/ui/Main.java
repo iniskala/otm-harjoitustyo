@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package start;
+package seatinggenerator.ui;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import java.sql.*;
+import seatinggenerator.database.Database;
 import seatinggenerator.ui.Ui;
 /**
  *
@@ -20,7 +21,8 @@ public class Main extends Ui {
      */
     public static void main(String[] args) throws Exception {
                        
-        
+        Database database = new Database("jdbc:sqlite:sitsit.db");
+        database.init();
         
         launch(Ui.class);
     }
