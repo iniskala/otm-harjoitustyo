@@ -19,15 +19,15 @@ import seatinggenerator.database.ParticipantDao;
  */
 public class Generator {
     private ParticipantDao help;
-    public void seatingSave(ParticipantDao database1) throws IOException, ClassNotFoundException, SQLException{
+    public void seatingSave(ParticipantDao database1) throws IOException, ClassNotFoundException, SQLException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
-        this.help=new ParticipantDao(database);
+        this.help = new ParticipantDao(database);
         List<Participant> list1 = help.findAll();
         
         FileWriter writer = new FileWriter("Seat_map.csv");
         
-        for (int i = 0; i < list1.size(); i++){
-            if(i == (list1.size()/2)) {
+        for (int i = 0; i < list1.size(); i++) {
+            if (i == (list1.size() / 2)) {
                 writer.append("\n");
             }
             writer.append(list1.get(i).getName() + ";");
@@ -37,6 +37,12 @@ public class Generator {
         writer.flush();
         writer.close();
         
+    }
+    public Integer numberOfParticipants() throws SQLException, ClassNotFoundException{
+        Database database = new Database("jdbc:sqlite:sitsit.db");
+        this.help = new ParticipantDao(database);
+        List<Participant> list1 = help.findAll();
+        return list1.size();
     }
     
 }
