@@ -18,6 +18,10 @@ public class Participant {
     /**
     *
     * Konstruktori.
+    * 
+    * @param nimi antaa henkilölle nimen
+    * @param avec antaa henkilölle avecin
+    * @param toive antaa henkilölle pöytäseuratoiveen
     */
     public Participant(String nimi, String avec, String toive) {
         this.name = nimi;

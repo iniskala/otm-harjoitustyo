@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @Luo yhteyden tietokantaan ja mahdollisesti luo sen.
+ * Luo yhteyden tietokantaan ja mahdollisesti luo sen.
  */
 public class Database {
     private String databaseAddress;
