@@ -7,7 +7,7 @@ package seatinggenerator.database;
 
 /**
  *
- * @author nendeo
+ * Osallistuja luokka, jonka avulla luodaan osallistuja olio.
  */
 public class Participant {
     private Integer id;
@@ -15,11 +15,20 @@ public class Participant {
     private String avec;
     private String wish;
     
+    /**
+    *
+    * Konstruktori.
+    */
     public Participant(String nimi, String avec, String toive) {
         this.name = nimi;
         this.avec = avec;
         this.wish = toive;
     }
+    
+    /**
+    *
+    * Vaihtoehtoinen konstruktori.
+    */
     public Participant(Integer id, String nimi, String avec, String toive) {
         this.id = id;
         this.name = nimi;
@@ -55,6 +64,10 @@ public class Participant {
         return id;
     }
     
+    /**
+    *
+    * Palauttaa tiedot osallistujasta halutussa muodossa.
+    */
     @Override
     public String toString() {
         return "Participant: " + this.name + ", avec: " + this.avec + ", wish: " + this.wish;

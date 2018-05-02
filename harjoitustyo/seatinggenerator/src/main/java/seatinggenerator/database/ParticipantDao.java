@@ -11,7 +11,7 @@ import java.sql.*;
 import java.util.ArrayList;
 /**
  *
- * @author nendeo
+ * Tietokannan kanssa kommunikoimisen hoitava luokka.
  */
 public class ParticipantDao implements Dao<Participant, Integer> {
     private Database database;
@@ -20,6 +20,12 @@ public class ParticipantDao implements Dao<Participant, Integer> {
         this.database = database;
     }
     
+    
+    
+    /**
+    *
+    * Etsii tietyn henkilön tietokannasta.
+    */
     @Override
     public Participant findOne(Integer key) throws SQLException {
         Connection conn = database.getConnection();
@@ -43,6 +49,10 @@ public class ParticipantDao implements Dao<Participant, Integer> {
         return s;
     }
 
+    /**
+    *
+    * Etsiikaikki henkilöt tietokannasta.
+    */
     @Override
     public List<Participant> findAll() throws SQLException {
         List<Participant> participant = new ArrayList<>();
@@ -67,6 +77,10 @@ public class ParticipantDao implements Dao<Participant, Integer> {
         return participant;
     }
 
+    /**
+    *
+    * Tallentaa tai päivittää henkilön tiedot tietonkantaan.
+    */
     @Override
     public Participant saveOrUpdate(Participant sitsaaja) throws SQLException {
         Connection conn = database.getConnection();
@@ -91,6 +105,10 @@ public class ParticipantDao implements Dao<Participant, Integer> {
         return sitsaaja;
     }
 
+    /**
+    *
+    * Poistaa tietyn henkilön tietokannasta.
+    */
     @Override
     public void delete(Integer key) throws SQLException {
         Connection conn = database.getConnection();

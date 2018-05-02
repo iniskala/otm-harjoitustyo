@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author nendeo
+ * DAO luokka.
  */
 interface Dao<T, K> {
     T findOne(K key) throws SQLException;

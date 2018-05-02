@@ -16,7 +16,8 @@ import seatinggenerator.database.ParticipantDao;
 
 /**
  *
- * @author Iiro
+ * Luokka hoitaa tiedoston luomisen, jossa istumajärjestys on.
+ * Luokka myös generoi istumajärjestyksen.
  */
 public class Generator {
     private ParticipantDao help;
@@ -31,7 +32,10 @@ public class Generator {
         this.withavec = new ArrayList<Participant>();
     }
     
-    
+    /**
+    *
+    *  Generoi ja tallentaa istumajärjestyksen.
+    */
     public void seatingSave(ParticipantDao database1) throws IOException, ClassNotFoundException, SQLException {
                         
         FileWriter writer = new FileWriter("Seat_map.csv");
@@ -150,6 +154,11 @@ public class Generator {
         writer.close();
         
     }
+    
+    /**
+    *
+    * Palauttaa osallistujien määrän. Auttaa muiden luokkien toimintaa.
+    */
     public Integer numberOfParticipants() throws SQLException, ClassNotFoundException {
                 
         return list1.size();

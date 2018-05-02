@@ -29,10 +29,14 @@ import java.util.logging.Logger;
 import seatinggenerator.generatoretc.Generator;
 /**
  *
- * @author Iiro
+ * Käyttöliittymän luova luokka.
  */
 public class Ui extends Application {
     
+    /**
+    *
+    * Näkymä jossa näkyy kaikki osallistujat listana.
+    */
     private Scene allParticipants() throws Exception{
         Database database = new Database("jdbc:sqlite:sitsit.db");
         
@@ -63,6 +67,11 @@ public class Ui extends Application {
         return scene2;
     }
     
+    /**
+    *
+    * Aloitus näkymän luova luokka.
+    * 
+    */
     public void start(Stage window1)throws Exception{
         
         Database database = new Database("jdbc:sqlite:sitsit.db");       

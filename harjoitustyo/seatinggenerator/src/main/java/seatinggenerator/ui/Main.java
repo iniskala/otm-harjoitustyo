@@ -12,7 +12,7 @@ import seatinggenerator.database.Database;
 import seatinggenerator.ui.Ui;
 /**
  *
- * @author Iiro
+ * Käynnistää ohjelman.
  */
 public class Main extends Ui {
 

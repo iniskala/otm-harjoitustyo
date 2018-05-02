@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @author nendeo
+ * @Luo yhteyden tietokantaan ja mahdollisesti luo sen.
  */
 public class Database {
     private String databaseAddress;
@@ -22,6 +22,10 @@ public class Database {
         return DriverManager.getConnection(databaseAddress);
     }
     
+    /**
+    *
+    * Valmistelee tai luo tietokannan.
+    */
     public void init() {
         List<String> commands = sqliteCommands();
     
@@ -38,6 +42,10 @@ public class Database {
         }
     }
     
+    /**
+    *
+    * Tallennetut tietokanta komennot.
+    */
     private List<String> sqliteCommands() {
         ArrayList<String> lista = new ArrayList<>();
 

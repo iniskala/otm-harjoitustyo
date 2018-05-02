@@ -16,10 +16,7 @@ import seatinggenerator.database.Database;
 import seatinggenerator.database.Participant;
 import seatinggenerator.database.ParticipantDao;
 import seatinggenerator.generatoretc.Generator;
-/**
- *
- * @author Iiro
- */
+
 public class ParticipantDaoTest {
     private Participant testman;
     private ParticipantDao test;
