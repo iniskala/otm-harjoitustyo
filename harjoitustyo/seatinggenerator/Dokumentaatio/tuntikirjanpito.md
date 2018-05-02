@@ -13,4 +13,5 @@ Päivä|----|Aika(h)|-----|Mitä
 24.4.|----|4|---------| Generoimisen lisäys ja tekstien lisäys
 
 2.5.|----|5|---------| Generoimisen parantelu ja javadocin teko
+
 Yhteensä: 25,5 h
