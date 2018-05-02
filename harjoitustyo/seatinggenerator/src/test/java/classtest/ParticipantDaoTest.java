@@ -38,7 +38,7 @@ public class ParticipantDaoTest {
     }
     
     @Before
-    public void setUp() throws ClassNotFoundException {
+    public void setUp() throws ClassNotFoundException, SQLException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.test = new ParticipantDao(database);
         this.testman = new Participant("Test1", "Test1", "Test1");

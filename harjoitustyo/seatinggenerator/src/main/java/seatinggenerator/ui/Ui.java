@@ -43,14 +43,21 @@ public class Ui extends Application {
         List list1 = new ArrayList<Participant>(participantdao.findAll());
         StringBuilder builder = new StringBuilder();
         
+        
+        
         for (int i = 0; i < list1.size(); i++){
             
             builder.append(list1.get(i).toString() + "\n");
             
         }
         
+        
         list2.setText(builder.toString());
+        
+        
+        
         listwindow.setCenter(list2);
+        
         Scene scene2 =new Scene(listwindow);
         
         return scene2;
@@ -116,23 +123,50 @@ public class Ui extends Application {
         });
         
         save.setOnMouseClicked((event) ->{                                    
-           if(names.getText().isEmpty()){
-              
-           } else if(avectxt.getText().isEmpty()){
-               newp.setAvec("Empty");
-           } else if(wishtxt.getText().isEmpty()){
+            if(!names.getText().isEmpty()){
+                newp.setName(names.getText());
+                newp.setAvec(avec.getText());
+                newp.setWish(wish.getText());
+                try {
+                    participantdao.saveOrUpdate(newp);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else if(avec.getText().isEmpty() && wish.getText().isEmpty()){
+                avec.setText("Empty");
+                wish.setText("Empty");
+                newp.setName(names.getText());
+                newp.setAvec(avec.getText());
+                newp.setWish(wish.getText());
+                try {
+                    participantdao.saveOrUpdate(newp);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else if(avec.getText().isEmpty()){
+                avec.setText("Empty");
+                newp.setName(names.getText());
+                newp.setAvec(avec.getText());
+                newp.setWish(wish.getText());
+                try {
+                    participantdao.saveOrUpdate(newp);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else if(wish.getText().isEmpty()){
+                wish.setText("Empty");
+                newp.setName(names.getText());
+                newp.setAvec(avec.getText());
+                newp.setWish(wish.getText());
+                try {
+                    participantdao.saveOrUpdate(newp);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } 
+           
                
-           } else {
-               newp.setName(names.getText());
-               newp.setAvec(avec.getText());
-               newp.setWish(wish.getText());
-               try {
-                   participantdao.saveOrUpdate(newp);
-               } catch (SQLException ex) {
-                   Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
-               }
-               
-           }
+           
         });
         
         Scene scene1 = new Scene(startwindow);
