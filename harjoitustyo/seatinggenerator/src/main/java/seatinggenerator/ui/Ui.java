@@ -132,7 +132,7 @@ public class Ui extends Application {
         });
         
         save.setOnMouseClicked((event) ->{                                    
-            if(!names.getText().isEmpty()){
+            if(!names.getText().trim().isEmpty()){
                 newp.setName(names.getText());
                 newp.setAvec(avec.getText());
                 newp.setWish(wish.getText());
@@ -141,7 +141,7 @@ public class Ui extends Application {
                 } catch (SQLException ex) {
                     Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if(avec.getText().isEmpty() && wish.getText().isEmpty()){
+            } else if(avec.getText().trim().isEmpty() && wish.getText().trim().isEmpty()){
                 avec.setText("Empty");
                 wish.setText("Empty");
                 newp.setName(names.getText());
@@ -152,7 +152,7 @@ public class Ui extends Application {
                 } catch (SQLException ex) {
                     Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if(avec.getText().isEmpty()){
+            } else if(avec.getText().trim().isEmpty()){
                 avec.setText("Empty");
                 newp.setName(names.getText());
                 newp.setAvec(avec.getText());
@@ -162,7 +162,7 @@ public class Ui extends Application {
                 } catch (SQLException ex) {
                     Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if(wish.getText().isEmpty()){
+            } else if(wish.getText().trim().isEmpty()){
                 wish.setText("Empty");
                 newp.setName(names.getText());
                 newp.setAvec(avec.getText());

@@ -33,8 +33,8 @@ public class Generator {
     public Generator() throws ClassNotFoundException, SQLException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.help = new ParticipantDao(database);
-        this.listgenerator = new Listgenerator(this.list1);
         this.list1 = new ArrayList<Participant>(help.findAll());
+        this.listgenerator = new Listgenerator(this.list1);        
         this.withavec = new ArrayList<Participant>(listgenerator.withavecList());
         this.withall = new ArrayList<Participant>(listgenerator.withallList());
         this.withwish = new ArrayList<Participant>(listgenerator.withwishList());
@@ -65,40 +65,40 @@ public class Generator {
             
              
             if (which == 0 && alonei < this.alone.size()) {
-                writer.append(alone.get(alonei).getName());
+                writer.append(alone.get(alonei).getName() + ";");
                 alonei++;
                 point++;
             } else {
                 which = which + 1;
             }
             if (which == 1 && withaveci < this.withavec.size() && half != point + 2 && half != point + 1) {
-                writer.append(withavec.get(withaveci).getName());
+                writer.append(withavec.get(withaveci).getName() + ";");
                 withaveci++;
                 point++;
-                writer.append(withavec.get(withaveci).getName());
+                writer.append(withavec.get(withaveci).getName() + ";");
                 withaveci++;
                 point++;
             } else {
                 which = which + 1;
             }
             if (which == 2 && withwishi < this.withwish.size() && half != point + 2 && half != point + 1) {
-                writer.append(withwish.get(withwishi).getName());
+                writer.append(withwish.get(withwishi).getName() + ";");
                 withwishi++;
                 point++;
-                writer.append(withwish.get(withwishi).getName());
+                writer.append(withwish.get(withwishi).getName() + ";");
                 withwishi++;
                 point++;
             } else {
                 which = which + 1;
             }
             if (which == 3 && withalli < this.withall.size() && half != point + 2 && half != point + 1 && half != point +3) {
-                writer.append(withall.get(withalli).getName());
+                writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
-                writer.append(withall.get(withalli).getName());
+                writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
-                writer.append(withall.get(withalli).getName());
+                writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
             } else {
