@@ -14,4 +14,7 @@ Päivä|----|Aika(h)|-----|Mitä
 
 2.5.|----|5|---------| Generoimisen parantelu ja javadocin teko
 
-Yhteensä: 25,5 h
+7.5.|----|3,5|---------| Generoimisen uudelleen koodaus.
+
+
+Yhteensä: 29 h
