@@ -112,7 +112,7 @@ public class Generator {
                 writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
-            } else if (alonei == alone.size() && half == point + 1){
+            } else if (alonei == alone.size() && half == point + 1) {
                 writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
