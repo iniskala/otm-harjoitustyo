@@ -16,5 +16,6 @@ Päivä|----|Aika(h)|-----|Mitä
 
 7.5.|----|3,5|---------| Generoimisen uudelleen koodaus.
 
+8.5.|----|2|---------| Generoimisen viimeistely.
 
-Yhteensä: 29 h
+Yhteensä: 31 h
