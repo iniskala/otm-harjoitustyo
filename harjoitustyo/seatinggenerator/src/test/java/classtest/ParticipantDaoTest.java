@@ -40,12 +40,14 @@ public class ParticipantDaoTest {
         this.test = new ParticipantDao(database);
         this.testman = new Participant("Test1", "Test1", "Test1");
         this.helper = new Generator();
+        
     }
     @Test
     public void insertWorks() throws SQLException, ClassNotFoundException {
+        Database database = new Database("jdbc:sqlite:sitsit.db");
         test.saveOrUpdate(testman);
         Integer answer = test.findOne(helper.numberOfParticipants() + 1 ).getId() ;
-        
+        database.init();
         assertEquals(answer, testman.getId());
         
         

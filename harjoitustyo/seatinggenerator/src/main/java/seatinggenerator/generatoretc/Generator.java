@@ -61,17 +61,19 @@ public class Generator {
             int which = rnd.nextInt(4); 
             if (half == point) {
                 writer.append("\n");
+                point++;
             }
             
              
-            if (which == 0 && alonei < this.alone.size()) {
+            if (which == 1 && alonei < this.alone.size()) {
                 writer.append(alone.get(alonei).getName() + ";");
                 alonei++;
                 point++;
+                
             } else {
-                which = which + 1;
+                i--;       
             }
-            if (which == 1 && withaveci < this.withavec.size() && half != point + 2 && half != point + 1) {
+            if (which == 2 && withaveci < this.withavec.size() && half != point + 2 && half != point + 1) {
                 writer.append(withavec.get(withaveci).getName() + ";");
                 withaveci++;
                 point++;
@@ -79,22 +81,42 @@ public class Generator {
                 withaveci++;
                 point++;
             } else {
-                which = which + 1;
+                i--;
+                
             }
-            if (which == 2 && withwishi < this.withwish.size() && half != point + 2 && half != point + 1) {
+            if (which == 3 && withwishi < this.withwish.size() && half != point + 2 && half != point + 1) {
                 writer.append(withwish.get(withwishi).getName() + ";");
                 withwishi++;
                 point++;
                 writer.append(withwish.get(withwishi).getName() + ";");
                 withwishi++;
                 point++;
-            } else {
-                which = which + 1;
+            } else if (alonei == alone.size() && half == point + 1) {
+                writer.append(withwish.get(withwishi).getName() + ";");
+                withwishi++;
+                point++;
+                writer.append("\n");
+                writer.append(withwish.get(withwishi).getName() + ";");
+                withwishi++;
+                point++;
+            } else {    
+                i--;
             }
-            if (which == 3 && withalli < this.withall.size() && half != point + 2 && half != point + 1 && half != point +3) {
+            if (which == 0 && withalli < this.withall.size() && half != point + 2 && half != point + 1 && half != point + 3) {
                 writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
+                writer.append(withall.get(withalli).getName() + ";");
+                withalli++;
+                point++;
+                writer.append(withall.get(withalli).getName() + ";");
+                withalli++;
+                point++;
+            } else if (alonei == alone.size() && half == point + 1){
+                writer.append(withall.get(withalli).getName() + ";");
+                withalli++;
+                point++;
+                writer.append("\n");
                 writer.append(withall.get(withalli).getName() + ";");
                 withalli++;
                 point++;
@@ -102,7 +124,7 @@ public class Generator {
                 withalli++;
                 point++;
             } else {
-                which = which - 1;
+                i--;
             }
         }
         writer.flush();
