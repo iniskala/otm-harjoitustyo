@@ -18,4 +18,6 @@ Päivä|----|Aika(h)|-----|Mitä
 
 8.5.|----|2|---------| Generoimisen viimeistely.
 
-Yhteensä: 31 h
+11.5.|----|6|---------| Viimeistylyä ja dokumentointia
+
+Yhteensä: 37 h
