@@ -1,24 +1,25 @@
 
+# Sitsiplassaaja
 
-Sitsiplassaaja
+Sovelluksen avulla voidaan generoida istumajärjestys sitseille. Ohjelmaan syötetään sitsaajan tiedot
+ja ne tallentaan tietokantaan. Tietokannasta voidaan generoida sattumanvarainen istumajärjestys, joka
+ottaa huomioon sitsaajan tiedot.
 
-Sovelluksen avulla voidaan generoida istumajärjestys sitseille. Ohjelmaan syötetään sitsaajan tiedot ja ne tallentaan tietokantaan. Tietokannasta voidaan generoida sattumanvarainen istumajärjestys, joka ottaa huomioon sitsaajan tiedot.
+## Dokumentaatio
 
-Dokumentaatio
+[Vaatimusmäärittely](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
 
-Vaatimusmäärittely
+[Työaikakirjanpito](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/tuntikirjanpito.md)
 
-Työaikakirjanpito
+[Arkkitehtuuri](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Arkkitehtuuri.md)
 
-Arkkitehtuuri
+[Julkaisu](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
 
-Julkaisu
+## Komentorivitoiminnot
 
-Komentorivitoiminnot
+### Testaus
 
-Testaus
-
-Testit voidaan suoritttaa komenolla
+Testit voidaan suoritttaa komennolla
 
 mvn test
 
@@ -28,13 +29,13 @@ mvn jacoco:report
 
 Luotu kattavuus raportti löytyy repositoriosta target/site/jacoco/index.html sen voi avata selaimella.
 
-Suoritettavan jarin generointi
+### Suoritettavan jarin generointi
 
 tapahtuu komennolla
 
 mvn package
 
-Checkstyle
+### Checkstyle
 
 Tiedostoon checkstyle.xml määritellyt tarkistukset vidaan suorittaa komennolla.
 
@@ -42,7 +43,7 @@ mvn jxr:jxr checkstyle:checkstyle
 
 Mahdolliset virheet voidaan katsoa tiedostosta target/site/checkstyle.html ja se voidaan avata selaimella.
 
-Javadoc
+### Javadoc
 
 Projektille on tehty javadoc kuvaukset ja ne saadaan generoitua komenolla
 
