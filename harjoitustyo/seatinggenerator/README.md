@@ -17,6 +17,10 @@ ottaa huomioon sitsaajan tiedot.
 
 ## Releaset
 
+[Viikko5](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
+
+[Viikko6](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko6)
+
 
 ## Komentorivitoiminnot
 
