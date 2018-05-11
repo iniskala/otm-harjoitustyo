@@ -40,7 +40,7 @@ Luotu kattavuus raportti löytyy repositoriosta target/site/jacoco/index.html se
 
 ### Suoritettavan jarin generointi
 
-tapahtuu komennolla
+Jarin generointi tapahtuu komennolla.
 
 ```
 mvn package
