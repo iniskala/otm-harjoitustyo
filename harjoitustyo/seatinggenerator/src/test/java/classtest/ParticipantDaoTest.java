@@ -24,6 +24,7 @@ public class ParticipantDaoTest {
     private Generator helper;
     
     public ParticipantDaoTest() {
+        
     }
     
     @BeforeClass

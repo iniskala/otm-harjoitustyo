@@ -16,13 +16,14 @@ import static org.junit.Assert.*;
 import seatinggenerator.database.Database;
 import seatinggenerator.database.Participant;
 import seatinggenerator.database.ParticipantDao;
+import seatinggenerator.generatoretc.Finder;
 import seatinggenerator.generatoretc.Generator;
 
 /**
  *
  * @author nendeo
  */
-public class GeneratorTest {
+public class FinderTest {
     private Participant testman;
     private Participant testman2;
     private Participant testman3;
@@ -36,18 +37,17 @@ public class GeneratorTest {
     private Participant testman11;
     private ParticipantDao test;
     private Generator helper;
-    
-    public GeneratorTest() {
-        
+    private Finder finder;
+    public FinderTest() {
     }
     
     @BeforeClass
     public static void setUpClass() {
-        
     }
     
     @AfterClass
     public static void tearDownClass() {
+        
     }
     
     @Before
@@ -60,8 +60,8 @@ public class GeneratorTest {
         this.testman4 = new Participant("Test4", "Empty", "Empty");
         this.testman5 = new Participant("Test5", "Empty", "Test6");
         this.testman6 = new Participant("Test6", "Empty", "Test5");    
-        this.testman7 = new Participant("Test7", "Test8", "Empty");
-        this.testman8 = new Participant("Test8", "Test7", "Empty");
+        this.testman7 = new Participant("Test7", "Empty", "Empty");
+        this.testman8 = new Participant("Test8", "Empty", "Empty");
         this.testman9 = new Participant("Test9", "Empty", "Empty");
         this.testman10 = new Participant("Test10", "Empty", "Test11");
         this.testman11 = new Participant("Test11", "Empty", "Test10");
@@ -76,9 +76,8 @@ public class GeneratorTest {
         test.saveOrUpdate(testman9);  
         test.saveOrUpdate(testman10);  
         test.saveOrUpdate(testman11);
-        
         this.helper = new Generator();
-        
+        this.finder = new Finder();
     }
     
     @After
@@ -97,10 +96,13 @@ public class GeneratorTest {
     }
 
     @Test
-    public void generatingWorks() throws SQLException, ClassNotFoundException, IOException{
-        
-        helper.seatingSave();
+    public void finderWorks() throws SQLException {        
         
         
+        Participant found = finder.findPerson("Test1", "Test2", "Test3");
+        int answer2 = testman.getId();
+        int test = found.getId();
+        
+        assertEquals(answer2, test);
     }
 }

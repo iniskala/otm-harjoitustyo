@@ -21,6 +21,7 @@ import seatinggenerator.database.Participant;
 public class ParticipantTest {
     
     public ParticipantTest() {
+        
     }
     
     @Before

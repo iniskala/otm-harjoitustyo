@@ -36,15 +36,14 @@ public class Finder {
         this.name = name;
         this.avec = avec;
         this.wish = wish;
-        boolean found = false;
+        
         
         for (int i = 0; i < list1.size(); i++) {
-            if (list1.get(i).getName().equals(name) && list1.get(i).getAvec().equals(avec) && list1.get(i).getWish().equals(wish)) {
-                this.wanted = list1.get(i);
-                found = true;
-            }            
+            if (list1.get(i).getName().equals(this.name) && list1.get(i).getAvec().equals(this.avec) && list1.get(i).getWish().equals(this.wish)) {
+                this.wanted = list1.get(i);               
+            }
         }
-       
+        
         return this.wanted;
         
         
