@@ -20,11 +20,15 @@ ottaa huomioon sitsaajan tiedot.
 
 ## Komentorivitoiminnot
 
+
 ### Testaus
+
 
 Testit voidaan suoritttaa komennolla
 
+'''
 mvn test
+'''
 
 Testikattavuusraportti voidaan luoda komennolla
 
