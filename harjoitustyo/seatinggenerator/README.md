@@ -13,7 +13,9 @@ ottaa huomioon sitsaajan tiedot.
 
 [Arkkitehtuurikuvaus](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Arkkitehtuuri.md)
 
-[Julkaisu](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
+[Käyttöohje](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Kayttoohje.md)
+
+[Testausdokumentti](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Testaudokumentti.md)
 
 ## Releaset
 
