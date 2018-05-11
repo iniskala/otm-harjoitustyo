@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import seatinggenerator.generatoretc.Finder;
 import seatinggenerator.generatoretc.Generator;
 /**
  *
@@ -85,6 +86,7 @@ public class Ui extends Application {
         Database database = new Database("jdbc:sqlite:sitsit.db");       
         ParticipantDao participantdao = new ParticipantDao(database);
         Participant newp = new Participant("name","avec","wish");
+        Finder finder = new Finder();
         
         BorderPane startwindow = new BorderPane();
         Label title = new Label("Sitsiplassaaja");
@@ -106,9 +108,9 @@ public class Ui extends Application {
         Button save = new Button ("Save");
         Button exit = new Button("Exit");
         Button list = new Button("Participants");
-        
+        Button remove = new Button ("remove");
         info.getChildren().addAll(name, names, avectxt, avec, wishtxt, wish);
-        buttons.getChildren().addAll(save, generoi, list, exit);
+        buttons.getChildren().addAll(save, generoi, list, remove, exit);
         
         startwindow.setTop(name);
         startwindow.setBottom(buttons);
@@ -118,6 +120,16 @@ public class Ui extends Application {
             System.exit(0);
         });
         
+        remove.setOnMouseClicked((event) -> {
+            if (!names.getText().isEmpty()){
+                Participant delete = finder.findPerson(names.getText(), avec.getText(), wish.getText());
+                try {
+                    participantdao.delete(delete.getId());
+                } catch (SQLException ex) {
+                    Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
         
         Generator generator = new Generator();
         generoi.setOnMouseClicked((event) ->{
