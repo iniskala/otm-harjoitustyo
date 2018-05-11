@@ -26,13 +26,15 @@ ottaa huomioon sitsaajan tiedot.
 
 Testit voidaan suoritttaa komennolla
 
-'''
+```
 mvn test
-'''
+```
 
 Testikattavuusraportti voidaan luoda komennolla
 
+```
 mvn jacoco:report
+```
 
 Luotu kattavuus raportti löytyy repositoriosta target/site/jacoco/index.html sen voi avata selaimella.
 
@@ -40,13 +42,17 @@ Luotu kattavuus raportti löytyy repositoriosta target/site/jacoco/index.html se
 
 tapahtuu komennolla
 
+```
 mvn package
+```
 
 ### Checkstyle
 
 Tiedostoon checkstyle.xml määritellyt tarkistukset vidaan suorittaa komennolla.
 
+```
 mvn jxr:jxr checkstyle:checkstyle
+```
 
 Mahdolliset virheet voidaan katsoa tiedostosta target/site/checkstyle.html ja se voidaan avata selaimella.
 
@@ -54,6 +60,8 @@ Mahdolliset virheet voidaan katsoa tiedostosta target/site/checkstyle.html ja se
 
 Projektille on tehty javadoc kuvaukset ja ne saadaan generoitua komenolla
 
+```
 mvn javadoc:javadoc
+```
 
 Dokumentointi voidaan katsoa tiedostosta target/site/apidocs/index.html
