@@ -1,17 +1,17 @@
-Vaatimusmäärittely
+# Vaatimusmäärittely
 
 
-Sovelluksen tarkoitus
+## Sovelluksen tarkoitus
 
 Sovellukseen voidaan syöttää henkilöitä, jotka osallistuvat sitseille. Ohjelma generoi syötetyistä henkilöistä istumajärjestyksen, joka ottaa huomioon henkilöiden avecin ja pöytäseuratoiveen.
 
 
-Käyttäjät
+## Käyttäjät
 
 Sovelluksella on vain yksi käyttäjärooli.
 
 
-Perusversion tarjoama toiminnallisuus
+## Perusversion tarjoama toiminnallisuus
 
 -Käyttäjä voi lisätä henkilöitä tietokantaan.
 -Käyttäjä voi generoida sitseille istumajärjestyksen.
@@ -19,7 +19,7 @@ Perusversion tarjoama toiminnallisuus
 
 
 
-Jatkokehitysideoita
+## Jatkokehitysideoita
 
 -Käyttäjä voi lisätä henkilölle useamman pöytäseuratoiveen
 -Käyttäjä voi muokata jo syötettyä henkilöä
