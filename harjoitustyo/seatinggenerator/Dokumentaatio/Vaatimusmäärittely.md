@@ -13,18 +13,18 @@ Sovelluksella on vain yksi käyttäjärooli.
 
 ## Perusversion tarjoama toiminnallisuus
 
--Käyttäjä voi lisätä henkilöitä tietokantaan.
--Käyttäjä voi generoida sitseille istumajärjestyksen.
--Istumajärjestys ottaa huomioon toiveet.
+- Käyttäjä voi lisätä henkilöitä tietokantaan.
+- Käyttäjä voi generoida sitseille istumajärjestyksen.
+- Istumajärjestys ottaa huomioon toiveet.
 
 
 
 ## Jatkokehitysideoita
 
--Käyttäjä voi lisätä henkilölle useamman pöytäseuratoiveen
--Käyttäjä voi muokata jo syötettyä henkilöä
--Plassissa merkitään myös toivottu viini
--Plassissa lukee allergiat keittiön helpotukseksi
--Plassissa voi määritellä pöytien määrän ja koon
--Plassissa voi olla useampi pöytärivi
--Käyttäjä voi tutkia vanhoja plassauksia.
+- Käyttäjä voi lisätä henkilölle useamman pöytäseuratoiveen
+- Käyttäjä voi muokata jo syötettyä henkilöä
+- Plassissa merkitään myös toivottu viini
+- Plassissa lukee allergiat keittiön helpotukseksi
+- Plassissa voi määritellä pöytien määrän ja koon
+- Plassissa voi olla useampi pöytärivi
+- Käyttäjä voi tutkia vanhoja plassauksia.
