@@ -11,7 +11,7 @@ ottaa huomioon sitsaajan tiedot.
 
 [Työaikakirjanpito](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/tuntikirjanpito.md)
 
-[Arkkitehtuuri](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Arkkitehtuuri.md)
+[Arkkitehtuurikuvaus](https://github.com/iniskala/otm-harjoitustyo/blob/master/harjoitustyo/seatinggenerator/Dokumentaatio/Arkkitehtuuri.md)
 
 [Julkaisu](https://github.com/iniskala/otm-harjoitustyo/releases/tag/Viikko5)
 
