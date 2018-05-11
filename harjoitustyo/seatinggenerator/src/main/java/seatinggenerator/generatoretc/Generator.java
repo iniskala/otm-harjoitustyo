@@ -28,9 +28,17 @@ public class Generator {
     private List<Participant> withwish;
     private List<Participant> withall;
     private Listgenerator listgenerator;
-
+    private FileWriter writer;
+    private Random rnd;
+    private int size;
+    private int half;
+    private int point;
+    private int alonei;
+    private int withaveci;
+    private int withalli;
+    private int withwishi;
     
-    public Generator() throws ClassNotFoundException, SQLException {
+    public Generator() throws ClassNotFoundException, SQLException, IOException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.help = new ParticipantDao(database);
         this.list1 = new ArrayList<Participant>(help.findAll());
@@ -39,25 +47,33 @@ public class Generator {
         this.withall = new ArrayList<Participant>(listgenerator.withallList());
         this.withwish = new ArrayList<Participant>(listgenerator.withwishList());
         this.alone = new ArrayList<Participant>(listgenerator.aloneList());
+        this.writer = new FileWriter("Seat_map.csv");
+        this.rnd = new Random();
     }
-    
+    /**
+    *
+    *  Alustaa metodin seatingSave muuttujat.
+    */
+    public void intinit() {
+        this.size = list1.size();
+        this.half = size / 2;
+        this.point = 0;
+        this.alonei = 0;
+        this.withaveci = 0;
+        this.withalli = 0;
+        this.withwishi = 0;
+    }
     /**
     *
     *  Generoi ja tallentaa istumajärjestyksen.
+    * 
     */
-    public void seatingSave(ParticipantDao database1) throws IOException, ClassNotFoundException, SQLException {
+    public void seatingSave() throws IOException, ClassNotFoundException, SQLException {
                         
-        FileWriter writer = new FileWriter("Seat_map.csv");
         
-        Random rnd = new Random();
-        int size = list1.size();
-        int half = size / 2;
-        int point = 0;
-        int alonei = 0;
-        int withaveci = 0;
-        int withalli = 0;
-        int withwishi = 0;
-        for (int i = 0; i < list1.size(); i++) {
+        intinit();
+        
+        for (int i = 0; i < size; i++) {
             int which = rnd.nextInt(4); 
             if (half == point) {
                 writer.append("\n");

@@ -50,7 +50,7 @@ public class GeneratorTest {
     }
     
     @Before
-    public void setUp() throws ClassNotFoundException, SQLException {
+    public void setUp() throws ClassNotFoundException, SQLException, IOException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.test = new ParticipantDao(database);
         this.testman = new Participant("Test1", "Test2", "Test3");
@@ -95,7 +95,7 @@ public class GeneratorTest {
         test.saveOrUpdate(testman9);  
         test.saveOrUpdate(testman10);  
         test.saveOrUpdate(testman11);
-        helper.seatingSave(test);
+        helper.seatingSave();
         
         
     }

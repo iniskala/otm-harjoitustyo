@@ -5,6 +5,7 @@
  */
 package classtest;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -35,7 +36,7 @@ public class ParticipantDaoTest {
     }
     
     @Before
-    public void setUp() throws ClassNotFoundException, SQLException {
+    public void setUp() throws ClassNotFoundException, SQLException, IOException {
         Database database = new Database("jdbc:sqlite:sitsit.db");
         this.test = new ParticipantDao(database);
         this.testman = new Participant("Test1", "Test1", "Test1");

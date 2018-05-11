@@ -32,7 +32,11 @@ import seatinggenerator.generatoretc.Generator;
  * Käyttöliittymän luova luokka.
  */
 public class Ui extends Application {
+    private Stage window1;
     
+    public Ui() {
+        this.window1 = new Stage();
+    }
     /**
     *
     * Näkymä jossa näkyy kaikki osallistujat listana.
@@ -46,7 +50,7 @@ public class Ui extends Application {
         Label list2 = new Label("");
         List list1 = new ArrayList<Participant>(participantdao.findAll());
         StringBuilder builder = new StringBuilder();
-        
+        Button return1 = new Button("Return");
         
         
         for (int i = 0; i < list1.size(); i++){
@@ -58,21 +62,21 @@ public class Ui extends Application {
         
         list2.setText(builder.toString());
         
-        
+        return1.setOnMouseClicked((event) ->{
+            try {
+                window1.setScene(startWindow());
+            } catch (Exception ex) {
+            }
+        });
         
         listwindow.setCenter(list2);
-        
+        listwindow.setBottom(return1);
         Scene scene2 =new Scene(listwindow);
         
         return scene2;
     }
     
-    /**
-    *
-    * Aloitus näkymän luova luokka.
-    * 
-    */
-    public void start(Stage window1)throws Exception{
+    private Scene startWindow() throws ClassNotFoundException, SQLException, IOException {
         
         Database database = new Database("jdbc:sqlite:sitsit.db");       
         ParticipantDao participantdao = new ParticipantDao(database);
@@ -114,7 +118,7 @@ public class Ui extends Application {
         Generator generator = new Generator();
         generoi.setOnMouseClicked((event) ->{
             try {
-                generator.seatingSave(participantdao);
+                generator.seatingSave();
             } catch (IOException ex) {
                 Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
             } catch (ClassNotFoundException ex) {
@@ -180,7 +184,18 @@ public class Ui extends Application {
         
         Scene scene1 = new Scene(startwindow);
         
-        window1.setScene(scene1);
+        return scene1;
+    } 
+    /**
+    *
+    * Aloitus näkymän luova luokka.
+    * 
+    */
+    public void start(Stage window1)throws Exception{
+        
+        this.window1 = window1;
+        
+        window1.setScene(startWindow());
         window1.show();
     }
     
