@@ -9,7 +9,7 @@ import seatinggenerator.database.ParticipantDao;
 
 /**
  *
- * @author nendeo
+ * Luokka jonka avulla voidaan etsiä tietty henkilö osallistujista.
  */
 public class Finder {
     private ParticipantDao database1;
@@ -25,7 +25,13 @@ public class Finder {
         this.list1 = new ArrayList<Participant>(database1.findAll());
         
     }
-    
+/**
+ *
+ * Metodi joka toteuttaa henkilön etsimisen
+ * @param name etsittävän henkilön nimi
+ * @param avec etsittävän henkilön avec
+ * @param wish etsittävän henkilön pöytäseuratoive
+ */
     public Participant findPerson(String name, String avec, String wish) {
         this.name = name;
         this.avec = avec;

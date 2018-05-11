@@ -51,7 +51,7 @@ public class ParticipantDao implements Dao<Participant, Integer> {
 
     /**
     *
-    * Etsiikaikki henkilöt tietokannasta.
+    * Etsii kaikki henkilöt tietokannasta.
     */
     @Override
     public List<Participant> findAll() throws SQLException {

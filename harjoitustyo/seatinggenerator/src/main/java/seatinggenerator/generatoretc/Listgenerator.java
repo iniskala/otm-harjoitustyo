@@ -11,7 +11,7 @@ import seatinggenerator.database.Participant;
 
 /**
  *
- * @author nendeo
+ * Luokka generoi osallistujista listoja, joita generaattori luokka käyttää hyväksi istumajärjsetystä tehdessä.
  */
 public class Listgenerator {
     private List<Participant> all;
@@ -28,6 +28,10 @@ public class Listgenerator {
         this.withall = new ArrayList<Participant>();
     }
     
+ /**
+ *
+ * Metodi, joka luo listan niistä henkilöistä, joilla ei ole avecia tai pöytäseuratoivetta.
+ */
     public List aloneList() {
         withallList();
         withavecList();
@@ -41,6 +45,10 @@ public class Listgenerator {
         return this.alone;
     }
     
+/**
+ *
+ * Metodi, joka luo listan niistä henkilöistä, joilla on avec, muttei pöytäseuratoivetta.
+ */    
     public List withavecList() { 
         withallList();
         for (int i = 0; i < all.size(); i++) {
@@ -58,7 +66,11 @@ public class Listgenerator {
         }        
         return this.withavec;
     }
-    
+
+/**
+ *
+ * Metodi, joka luo listan niistä henkilöistä, joilla ei ole avecia, mutta on pöytäseuratoive.
+ */    
     public List withwishList() {
         withallList();
         for (int i = 0; i < all.size(); i++) {
@@ -75,7 +87,10 @@ public class Listgenerator {
         }           
         return this.withwish;
     }
-    
+/**
+ *
+ * Metodi, joka luo listan niistä henkilöistä, joilla on avec, sekä pöytäseuratoive.
+ */    
     public List withallList() {       
         for (int i = 0; i < all.size(); i++) {            
             for (int i2 = 0; i2 < all.size(); i2++) {
