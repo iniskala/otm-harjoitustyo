@@ -49,7 +49,7 @@ public class Database {
     private List<String> sqliteCommands() {
         ArrayList<String> lista = new ArrayList<>();
 
-        lista.add("CREATE TABLE Sitsit(id integer PRIMARY KEY, nimi varchar(200), avec varchar(200), toive varchar(200));");
+        lista.add("CREATE TABLE IF NOT EXISTS Sitsit(id integer PRIMARY KEY, nimi varchar(200), avec varchar(200), toive varchar(200));");
         
         return lista;
     }

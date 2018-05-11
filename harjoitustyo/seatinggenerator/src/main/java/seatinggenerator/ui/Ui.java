@@ -75,7 +75,11 @@ public class Ui extends Application {
         
         return scene2;
     }
-    
+    /**
+    *
+    * Aloitus näkymän luova metodi.
+    * 
+    */
     private Scene startWindow() throws ClassNotFoundException, SQLException, IOException {
         
         Database database = new Database("jdbc:sqlite:sitsit.db");       
@@ -137,7 +141,7 @@ public class Ui extends Application {
         
         save.setOnMouseClicked((event) ->{                                    
             
-            if(avec.getText().isEmpty() && wish.getText().isEmpty()){
+            if(avec.getText().isEmpty() && wish.getText().isEmpty() && !names.getText().isEmpty()) {
                 avec.setText("Empty");
                 wish.setText("Empty");
                 newp.setName(names.getText());
@@ -148,7 +152,7 @@ public class Ui extends Application {
                 } catch (SQLException ex) {
                     Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if(avec.getText().isEmpty()){
+            } else if(avec.getText().isEmpty() && !names.getText().isEmpty()) {
                 avec.setText("Empty");
                 newp.setName(names.getText());
                 newp.setAvec(avec.getText());
@@ -158,7 +162,7 @@ public class Ui extends Application {
                 } catch (SQLException ex) {
                     Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if(wish.getText().isEmpty()){
+            } else if(wish.getText().isEmpty() && !names.getText().isEmpty()){
                 wish.setText("Empty");
                 newp.setName(names.getText());
                 newp.setAvec(avec.getText());
@@ -188,7 +192,7 @@ public class Ui extends Application {
     } 
     /**
     *
-    * Aloitus näkymän luova luokka.
+    * Määrittää mikä näkymä näkyy kun ohjelma käynnistyy.
     * 
     */
     public void start(Stage window1)throws Exception{
